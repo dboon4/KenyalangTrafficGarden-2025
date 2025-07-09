@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Traffic Garden 2025</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-001-start-point-toilet">
+        <li class="text">001-Start Point (Toilet)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-xx1-roundabout-1-intersection-1">
+        <li class="text">XX1-Roundabout 1 Intersection 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-xx2-roundabout-1-intersection-2">
+        <li class="text">XX2-Roundabout 1 Intersection 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-xx3-rounabout-1-intersection-3">
+        <li class="text">XX3-Rounabout 1 Intersection 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-xx4-roundabout-1-intersection-4">
+        <li class="text">XX4-Roundabout 1 Intersection 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-xx-traffic-intersection">
+        <li class="text">XX-Traffic Intersection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-002-rest-area">
+        <li class="text">002-Rest Area</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-003-pedestrian-bridge">
+        <li class="text">003-Pedestrian Bridge</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-004-canteen">
+        <li class="text">004-Canteen</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-005-canteen-zebra-crossing">
+        <li class="text">005-Canteen Zebra Crossing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-ax-roundabout-2-intersection-1">
+        <li class="text">AX-Roundabout 2 Intersection 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-ax1-roundabout-2">
+        <li class="text">AX1-Roundabout 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-bx-rounabout-2-intersection-2">
+        <li class="text">BX-Rounabout 2 Intersection 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-bx1-canteen-back">
+        <li class="text">BX1-Canteen Back</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-cx-roundabout-2-intersection-3">
+        <li class="text">CX-Roundabout 2 Intersection 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-cx1-hospital">
+        <li class="text">CX1-Hospital</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-cx2-way-to-police-station">
+        <li class="text">CX2-Way to Police Station</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-cx3-way-to-traffic-intersection">
+        <li class="text">CX3-Way to Traffic Intersection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-cx4-way-to-bus-station">
+        <li class="text">CX4-Way to Bus Station</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-cx5-bus-station">
+        <li class="text">CX5-Bus Station</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-cx6-way-to-roundabout-1">
+        <li class="text">CX6-Way to Roundabout 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-dx-roundabout-2-intersection-4">
+        <li class="text">DX-Roundabout 2 Intersection 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-dx1-police-station">
+        <li class="text">DX1-Police Station</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-dx2-way-to-traffic-intersection">
+        <li class="text">DX2-Way to Traffic Intersection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-dx3-school">
+        <li class="text">DX3-School</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-ex-way-to-petrol-station">
+        <li class="text">EX-Way to Petrol Station</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-ex1-petrol-station">
+        <li class="text">EX1-Petrol Station</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
